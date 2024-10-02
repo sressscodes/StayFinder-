@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <a href="/">
+                <h1>Stay Finder</h1>
+            </a>
+            <h3>Find the perfect stay for you</h3>
+        </div>
+        <div>
+            <form action="/" method="POST">
+                <input type="text" name="query" placeholder="Enter your query" required>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+    <div id="results-container">
+        <div id="result-head">
+            <h3>"{{ query }}" Hotels in Nepal</h3>
+        </div>
+        <div id="result-item">
+            <ul>
+                {% for doc, score in results %}
+                <li id="result-item">
+                    <span id="result-title">{{ doc.replace('.txt', '') }}</span><br>
+                    <span id="result-score">Score: {{ score }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

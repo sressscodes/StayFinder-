@@ -1,0 +1,101 @@
+/* General Styles */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+#container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Header */
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: #007bff;
+    padding: 16px 0;
+    text-align: center;
+}
+
+h3 {
+    color: #7b7b7b;
+    font-weight: 200;
+}
+
+/* Search Form */
+
+form {
+    padding: 20px;
+    background-color: #f4f4f4;
+    /* Light background for form */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for effect */
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Results Section */
+#results-container {
+    margin: 40px 200px;
+    padding: 20px 60px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#result-head h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+#result-item {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 0;
+}
+
+#result-item:last-child {
+    border-bottom: none;
+    /* Remove border for last item */
+}
+
+#result-title {
+    font-size: 16px;
+    margin-bottom: 2px;
+    color: #007bff;
+}
+
+#result-score {
+    font-size: 14px;
+    color: #666;
+}
